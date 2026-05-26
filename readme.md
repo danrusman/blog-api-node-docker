@@ -6,8 +6,8 @@ Este repositório contém o projeto completo do Tech Challenge desenvolvido para
 
 O projeto está dividido em três pilares principais rodando de forma orquestrada:
 
-1. **Frontend**: Aplicação SPA desenvolvida em **React + Vite**, otimizada e servida através de um servidor de produção **Nginx** na porta `80`.
-2. **Backend**: API RESTful desenvolvida em **Node.js** respondendo na porta `3000`.
+1. **Front-end**: Aplicação SPA desenvolvida em **React + Vite**, otimizada e servida através de um servidor de produção **Nginx** na porta `80`.
+2. **Back-end**: API RESTful desenvolvida em **Node.js** respondendo na porta `3000`.
 3. **Database**: Banco de dados NoSQL **MongoDB** na porta `27017` com persistência de dados via Docker Volumes.
 
 ---
@@ -41,6 +41,16 @@ Graças à orquestração com o Docker Compose, você pode subir o ecossistema c
 4. Aguarde a inicialização dos serviços. Assim que os logs estabilizarem, a aplicação estará disponível em:
     - Frontend (Blog): http://localhost
     - Backend (API): http://localhost:3000
+
+
+## Testando a API (Insomnia)
+
+Para facilitar os testes das rotas da API (como criação de posts, login do professor e inserção de comentários), disponibilizo um arquivo de **Collection do Insomnia**.
+
+1. O arquivo encontra-se em: `blog-api-node-docker/insomnia-collection.json`.
+2. Abra o **Insomnia**.
+3. Clique em **Import** > **From File** e selecione o arquivo JSON.
+4. Pronto! Todas as rotas, parâmetros e exemplos de *Body* serão carregados automaticamente.
 
 ## Como Parar a Aplicação
 
