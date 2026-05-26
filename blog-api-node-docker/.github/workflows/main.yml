@@ -1,0 +1,36 @@
+name: Node.js CI/CD - Blog Professores
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    services:
+      mongodb:
+        image: mongo:latest
+        ports:
+          - 27017:27017
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar Testes e Cobertura
+        run: npm test
+        env:
+          MONGO_URI: mongodb://localhost:27017/blogdb_test
+
+      - name: Build Docker Image (Check)
+        run: docker build -t blog-api-nacional .

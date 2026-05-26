@@ -1,0 +1,142 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Collection
+meta:
+  id: wrk_23dba8758f9a49d39815fd11057e08bf
+  created: 1774389284338
+  modified: 1774393331771
+  description: ""
+collection:
+  - url: http://localhost:3000/posts
+    name: blog-post
+    meta:
+      id: req_15f11024321e409da3fe787368da67c4
+      created: 1774389284344
+      modified: 1774396939687
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284344
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "titulo": "Apresentação Tech Challenge",
+          "conteudo": "Fase 2",
+          "autor": "Prof. Daniel"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts/69c3260fe40c8641da573ae2
+    name: blog-post
+    meta:
+      id: req_12a61d6ddcdc425db5e6f6ba74c0a0e5
+      created: 1774390012703
+      modified: 1774396983902
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284294
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "titulo": "Aula errada - remarcada"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts/69c3260fe40c8641da573ae2
+    name: blog-post
+    meta:
+      id: req_3e21884e5e7245d2baa040d767c777db
+      created: 1774390569804
+      modified: 1774397045985
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284244
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts
+    name: blog-post
+    meta:
+      id: req_062794cb7d844c508767e9df06c8c82c
+      created: 1774390827630
+      modified: 1774397035350
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284444
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0862f00684b6a7b37a98193365a84952ddf01b6f
+    created: 1774389284340
+    modified: 1774389284340
+environments:
+  name: Base Environment
+  meta:
+    id: env_0862f00684b6a7b37a98193365a84952ddf01b6f
+    created: 1774389284339
+    modified: 1774389284339
+    isPrivate: false

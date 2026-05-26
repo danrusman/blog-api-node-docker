@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  # Banco de Dados MongoDB
+  database:
+    image: mongo:latest
+    container_name: blog_mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  # API Back-End (Node.js)
+  app:
+    build: 
+      context: ./blog-api-node-docker
+      dockerfile: Dockerfile
+    container_name: blog_api_node
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://database:27017/blogdb # O Node conversa com o Mongo usando o nome do serviço
+      - PORT=3000
+    depends_on:
+      - database
+
+  # Front-End (React + Vite + Nginx)
+  front-end:
+    build:
+      context: ./tech-challenge-blog-frontend
+      dockerfile: Dockerfile
+    container_name: blog_frontend_nginx
+    restart: always
+    ports:
+      - "80:80" # Seu blog vai abrir direto digitando http://localhost no navegador
+    depends_on:
+      - app # O Front só sobe depois que a API Node estiver de pé
+
+volumes:
+  mongo-data:

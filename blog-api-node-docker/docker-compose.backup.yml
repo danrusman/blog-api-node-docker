@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  database:
+    image: mongo:latest
+    container_name: blog_mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    build: .
+    container_name: blog_api_node
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://database:27017/blogdb
+      - PORT=3000
+    depends_on:
+      - database
+
+volumes:
+  mongo-data:

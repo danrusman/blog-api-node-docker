@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Caso queira esconder a tela de admin dos motores de busca (opcional, mas recomendado):
+Disallow: /admin
+Disallow: /admin/*
