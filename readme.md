@@ -43,7 +43,8 @@ Graças à orquestração com o Docker Compose, você pode subir o ecossistema c
     - Backend (API): http://localhost:3000
 
 ## Como Parar a Aplicação
+
 Para encerrar os containers e liberar as portas do seu sistema, basta rodar:
-    ```bash
+    ```
     docker compose down
     ``` 
