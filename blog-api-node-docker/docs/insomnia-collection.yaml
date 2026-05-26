@@ -1,0 +1,142 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Fase 3
+meta:
+  id: wrk_12725e870a9242f4b6174390efd8ae47
+  created: 1779747064175
+  modified: 1779747064175
+  description: ""
+collection:
+  - url: http://localhost:3000/posts
+    name: blog-post
+    meta:
+      id: req_3d045708292a42239973d11ad7661246
+      created: 1774389284344
+      modified: 1779756664887
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284344
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "titulo": "Aula de Geometria Espacial",
+          "conteudo": "Fase 3",
+          "autor": "Prof. Mariana"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts/69c3260fe40c8641da573ae2
+    name: blog-post
+    meta:
+      id: req_1ce2fad606c14ad280cc276e1ac16200
+      created: 1774390012703
+      modified: 1774396983902
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284294
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "titulo": "Aula errada - remarcada"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts/69c3260fe40c8641da573ae2
+    name: blog-post
+    meta:
+      id: req_0283e551dbab44878eb1351facdf3c53
+      created: 1774390569804
+      modified: 1774397045985
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284244
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts
+    name: blog-post
+    meta:
+      id: req_ac6ddfc4787e495a8fb1bd8a07f90fe2
+      created: 1774390827630
+      modified: 1774397035350
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284444
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1486cc2db3204ad28384cdbdab455328
+    created: 1774389284340
+    modified: 1774389284340
+environments:
+  name: Base Environment
+  meta:
+    id: env_ebaac1e23b214262bd80b129a80a7263
+    created: 1774389284339
+    modified: 1774389284339
+    isPrivate: false
