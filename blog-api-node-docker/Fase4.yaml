@@ -1,0 +1,343 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Fase 4
+meta:
+  id: wrk_40c7ff4c3b6b424b8b216717aa7e39d0
+  created: 1785179414982
+  modified: 1785247189594
+  description: ""
+collection:
+  - url: http://localhost:3000/posts
+    name: blog-post
+    meta:
+      id: req_76d8d25b54264833a3ec46909574b190
+      created: 1774389284344
+      modified: 1785247233008
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284344
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "titulo": "Aula de Geometria Espacial",
+          "conteudo": "Fase 3",
+          "autor": "Prof. Mariana"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts/69c3260fe40c8641da573ae2
+    name: blog-post
+    meta:
+      id: req_a3e2d1d061234615afd65026ec9f1604
+      created: 1774390012703
+      modified: 1785250191887
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284294
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "titulo": "Aula errada - remarcada"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts/69c3260fe40c8641da573ae2
+    name: blog-post
+    meta:
+      id: req_49bfc0a5fa084f0bb8a40e3b218bdd08
+      created: 1774390569804
+      modified: 1774397045985
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284244
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/posts
+    name: blog-post
+    meta:
+      id: req_a3df2cf1345b470db0675de38724050e
+      created: 1774390827630
+      modified: 1785248380773
+      isPrivate: false
+      description: ""
+      sortKey: -1774389284444
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.4.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/teachers
+    name: blog-teachers
+    meta:
+      id: req_2ee2d2d9d8ea4b7c8ea1328972c734cc
+      created: 1785247239288
+      modified: 1785260867555
+      isPrivate: false
+      description: ""
+      sortKey: -1781175506221.5
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/teachers
+    name: blog-teachers
+    meta:
+      id: req_e1261e5f0da1472eb09440b0ec1baa57
+      created: 1785247268587
+      modified: 1785256658303
+      isPrivate: false
+      description: ""
+      sortKey: -1779818261866
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "nome": "Carlos Silva",
+          "email": "carlos.silva@escola.com",
+          "departamento": "Matemática",
+        	"senha": "123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/teachers/6a68c16d673664afcda572db
+    name: blog-teachers
+    meta:
+      id: req_1cf00f3613b642cfb55bfe3198a8e2b0
+      created: 1785247277038
+      modified: 1785250262822
+      isPrivate: false
+      description: ""
+      sortKey: -1777103773155
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "nome": "Carlos Silva Alterado",
+          "email": "carlos.alterado@escola.com",
+          "departamento": "Física"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/teachers/6a68c16d673664afcda572db
+    name: blog-teachers
+    meta:
+      id: req_f308930ae07d494a8013f242c015ebc9
+      created: 1785247285877
+      modified: 1785250332084
+      isPrivate: false
+      description: ""
+      sortKey: -1775746528799.5
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/students
+    name: blog-students
+    meta:
+      id: req_12a38fce80c345349a55744fcd3efc68
+      created: 1785250422980
+      modified: 1785250514640
+      isPrivate: false
+      description: ""
+      sortKey: -1783889995032.5
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/students
+    name: blog-students
+    meta:
+      id: req_7e78f76a43e2475492146ad8dd17b131
+      created: 1785250431858
+      modified: 1785250512621
+      isPrivate: false
+      description: ""
+      sortKey: -1783889994932.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "nome": "Mariana Souza",
+          "email": "mariana.souza@escola.com",
+          "matricula": "20260001"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/students/
+    name: blog-students
+    meta:
+      id: req_b5022dfdd63c4b498bc30907d4420182
+      created: 1785250450183
+      modified: 1785250521002
+      isPrivate: false
+      description: ""
+      sortKey: -1781854128399.25
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "nome": "Mariana Souza Alterado",
+          "email": "mariana.novo@escola.com",
+          "matricula": "20260001"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/students/6a68c34007da9517cf7595ce
+    name: blog-students
+    meta:
+      id: req_70518606c19d46b5b224233454cb07c6
+      created: 1785250458645
+      modified: 1785250797090
+      isPrivate: false
+      description: ""
+      sortKey: -1781514817310.375
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_51bb9e46fc9f48a79a70aa816097027c
+    created: 1774389284340
+    modified: 1774389284340
+environments:
+  name: Base Environment
+  meta:
+    id: env_38f83ca25797451293fc768cbbf86c1e
+    created: 1774389284339
+    modified: 1774389284339
+    isPrivate: false
